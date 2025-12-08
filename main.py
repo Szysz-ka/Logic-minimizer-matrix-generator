@@ -1,12 +1,20 @@
-def intToBinStr(bits:int, num: int):
+def int_to_bin_str(bits:int, num: int):
     return "0"*(bits-len(bin(num)[2:]))+bin(num)[2:]
 
 
-def matricer(bits: int, oneSet: list, zeroSet: list):
-    cubesT = [intToBinStr(bits, i) for i in sorted(oneSet)]
+def matricer(bits: int, one_set: list, zero_set: list):
+    cubest = [int_to_bin_str(bits, i) for i in sorted(one_set)]
 
-    cubesF = [intToBinStr(bits, i) for i in sorted(zeroSet)]
+    cubesf = [int_to_bin_str(bits, i) for i in sorted(zero_set)]
 
-    return [cubesT, cubesF]
+    return [cubest, cubesf]
 
-print(matricer(4, [0, 1, 2, 3], [4,7,16]))
+
+'''
+TO-DO
+def truth_tabler(bits: int, functions: list):
+
+
+#from os import path as pth
+filePath = str(input("Enter file path: "))
+'''
