@@ -1,5 +1,5 @@
 def int_to_bin_str(bits:int, num: int):
-    if num > 2**(bits-1):
+    if num > 2**(bits)-1:
         raise FunctionArgumentError(f"{num} jest poza skala")
     else:
         return "0"*(bits-len(bin(num)[2:]))+bin(num)[2:]
@@ -29,18 +29,7 @@ def truth_tabler(bits: int, functions: list):
     return 0
 '''
 
-oneSet = [2,5,7,9,8,6]
-zeroSet = [1,31,18,23]
 
-funkcja1=[6,oneSet,zeroSet]
-
-
-from os import path as pth
-filePath = str(input("Enter file path: "))
-
-with open(filePath,'w') as file:
-    for i in matricer(*funkcja1)[0]:
-        file.write(f"{i}\n")
 
 
 
